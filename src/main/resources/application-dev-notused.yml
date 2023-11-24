@@ -1,0 +1,30 @@
+server:
+  shutdown: immediate
+
+# Base URLs of downstream APIs. Switch the comments to use the real dev services instead of the test stubs
+api:
+  base:
+    url:
+      oauth: https://sign-in-dev.hmpps.service.justice.gov.uk/auth
+
+buildProperties.version: 1.0
+
+management.endpoint:
+  health.cache.time-to-live: 0
+  info.cache.time-to-live: 0
+spring:
+  devtools:
+    add-properties: true
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+
+
+  feature-toggles:
+    afine: true
