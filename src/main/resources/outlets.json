@@ -1,0 +1,23 @@
+[
+  {
+    "id": "001",
+    "name": "Burger King",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "002",
+    "name": "KFC",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "003",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  }
+]

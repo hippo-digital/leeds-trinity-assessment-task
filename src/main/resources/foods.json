@@ -1,0 +1,29 @@
+[
+  {
+    "id": "F001",
+    "outletId": "001",
+    "name": "Chicken Fillet Burger",
+    "startTime": "11:00:00",
+    "endTime": "15:00:00",
+    "inStock" : 200,
+    "active": "true"
+  },
+  {
+    "id": "F002",
+    "outletId": "002",
+    "name": "Grilled Chicken Burger",
+    "startTime": "11:30:00",
+    "endTime": "16:30:00",
+    "inStock" : 300,
+    "active": "true"
+  },
+  {
+    "id": "F003",
+    "outletId": "003",
+    "name": "Fillet-O-Fish",
+    "startTime": "11:30:00",
+    "endTime": "16:30:00",
+    "inStock" : 150,
+    "active": "true"
+  }
+]

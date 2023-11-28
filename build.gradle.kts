@@ -51,14 +51,17 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
+    implementation("com.google.guava:guava:31.1-android")
+
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.projectlombok:lombok:1.18.26")
 
+    implementation("com.google.code.gson:gson")
+
     runtimeOnly("org.flywaydb:flyway-core")
     implementation("org.flywaydb:flyway-sqlserver")
     runtimeOnly("org.springframework.boot:spring-boot-starter-jdbc")
-
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -75,6 +78,8 @@ dependencies {
     implementation("com.pauldijou:jwt-core_2.11:5.0.0")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+
+    compileOnly("com.google.code.gson:gson:2.9.0")
 
     testImplementation("org.awaitility:awaitility-kotlin")
     testImplementation("io.jsonwebtoken:jjwt-impl:0.11.5")
@@ -103,6 +108,9 @@ dependencies {
     runtimeOnly("com.microsoft.sqlserver:mssql-jdbc")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
+
+    implementation("com.google.code.gson:gson:2.8.9")
+
 }
 
 
