@@ -19,7 +19,6 @@ data class OutletsList(
     val content: List<OutletsDataDTO>?,
     val pageSize: Int?,
     val page: Int?,
-    val sortName: String?,
     val totalElements: Int?,
     val last: Boolean,
 )

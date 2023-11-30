@@ -25,5 +25,68 @@
     "endTime": "16:30:00",
     "inStock" : 150,
     "active": "true"
+  },
+  {
+    "id": "F004",
+    "outletId": "003",
+    "name": "Fillet-O-Fish",
+    "startTime": "11:30:00",
+    "endTime": "16:30:00",
+    "inStock" : 150,
+    "active": "true"
+  },
+  {
+    "id": "F005",
+    "outletId": "003",
+    "name": "Fillet-O-Fish",
+    "startTime": "11:30:00",
+    "endTime": "16:30:00",
+    "inStock" : 150,
+    "active": "true"
+  },
+  {
+    "id": "F006",
+    "outletId": "003",
+    "name": "Fillet-O-Fish",
+    "startTime": "11:30:00",
+    "endTime": "16:30:00",
+    "inStock" : 150,
+    "active": "true"
+  },
+  {
+    "id": "F007",
+    "outletId": "003",
+    "name": "Fillet-O-Fish",
+    "startTime": "11:30:00",
+    "endTime": "16:30:00",
+    "inStock" : 150,
+    "active": "true"
+  },
+  {
+    "id": "F008",
+    "outletId": "003",
+    "name": "Fillet-O-Fish",
+    "startTime": "11:30:00",
+    "endTime": "16:30:00",
+    "inStock" : 150,
+    "active": "true"
+  },
+  {
+    "id": "F009",
+    "outletId": "003",
+    "name": "Fillet-O-Fish",
+    "startTime": "11:30:00",
+    "endTime": "16:30:00",
+    "inStock" : 150,
+    "active": "true"
+  },
+  {
+    "id": "F010",
+    "outletId": "003",
+    "name": "Fillet-O-Fish",
+    "startTime": "11:30:00",
+    "endTime": "16:30:00",
+    "inStock" : 150,
+    "active": "true"
   }
 ]

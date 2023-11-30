@@ -19,5 +19,145 @@
     "openTime": "07:00:00",
     "closeTime": "17:00:00",
     "active": "true"
+  },
+  {
+    "id": "004",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "005",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "006",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "007",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "008",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "009",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "010",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "011",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "012",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "013",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "014",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "015",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "016",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "017",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "018",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "019",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "020",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "021",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "022",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
+  },
+  {
+    "id": "023",
+    "name": "McDonald's",
+    "openTime": "07:00:00",
+    "closeTime": "17:00:00",
+    "active": "true"
   }
 ]
