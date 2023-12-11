@@ -12,10 +12,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.responses.ApiResponses
 import org.springframework.http.MediaType
 import org.springframework.validation.annotation.Validated
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 
 @RestController
@@ -26,7 +23,7 @@ class FoodMenuResourceController(
 ) {
 
 
-  @Operation(summary = "Get all available outlets.", description = "All outlets data available in the university")
+  @Operation(summary = "Get all available Foods.", description = "All foods data available from outlets in the university")
   @ApiResponses(
     value = [
       ApiResponse(
@@ -56,7 +53,7 @@ class FoodMenuResourceController(
     ],
   )
   @GetMapping("/v1")
-  fun getAllOutlets(
+  fun getFoodsAllOutlets(
     @Schema(example = "0", required = true)
     @Parameter(required = true, description = "Zero-based page index (0..N)")
     @RequestParam(value = "page", defaultValue = "0")
@@ -67,5 +64,52 @@ class FoodMenuResourceController(
     size: Int,
   ): FoodsList {
     return foodsDataService.getAllFoodsMenuData(page, size)
+  }
+
+  @Operation(summary = "Get all available Foods in specific outlets.", description = "All foods data available from outlets in the university")
+  @ApiResponses(
+    value = [
+      ApiResponse(
+        responseCode = "200",
+        description = "Successful Operation",
+      ),
+      ApiResponse(
+        responseCode = "401",
+        description = "Unauthorized to access this endpoint",
+        content = [Content(mediaType = "application/json", schema = Schema(implementation = ErrorResponse::class))],
+      ),
+      ApiResponse(
+        responseCode = "403",
+        description = "Forbidden, requires an appropriate role",
+        content = [
+          Content(
+            mediaType = "application/json",
+            schema = Schema(implementation = ErrorResponse::class),
+          ),
+        ],
+      ),
+      ApiResponse(
+        responseCode = "400",
+        description = "Incorrect input options provided",
+        content = [Content(mediaType = "application/json", schema = Schema(implementation = ErrorResponse::class))],
+      ),
+    ],
+  )
+  @GetMapping("/v1/{outletId}")
+  fun getFoodsSpecificOutlet(
+    @Schema(example = "001", required = true)
+    @PathVariable("outletId")
+    @Parameter(required = true)
+    outletId: Int,
+    @Schema(example = "0", required = true)
+    @Parameter(required = true, description = "Zero-based page index (0..N)")
+    @RequestParam(value = "page", defaultValue = "0")
+    page: Int,
+    @Schema(example = "10", required = true)
+    @Parameter(required = true, description = "The size of the page to be returned, when given 0 shall return all records")
+    @RequestParam(value = "size", defaultValue = "0")
+    size: Int,
+  ): FoodsList {
+    return foodsDataService.getOutletFoodsMenuData(outletId, page, size)
   }
 }
