@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: task-api-service
-  namespace: hippodigital-dev-taskapi
+  namespace: hippodigital-dev-taskapi-1
 spec:
   selector:
     app: task-api
