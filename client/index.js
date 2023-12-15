@@ -9,7 +9,7 @@ class TrinityFood {
     getOutlets(options) {
         let queryString = undefined;
 
-        queryStringToJSON(queryString);
+        queryString = queryStringToJSON(queryString);
 
         // Lots of issues in here. Definite 'wat!' candidate
         if(options == undefined) {
