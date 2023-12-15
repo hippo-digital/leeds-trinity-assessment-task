@@ -6,13 +6,66 @@ class TrinityFood {
       this.basePath = 'http://35.195.182.8:8081/task-api/';
     }
 
-    getFood(options) {
+    getOutlets(options) {
+        let queryString = undefined;
+
+        // Can you even tell what this was attempting to do? There might be just enough in the regex to get an idea
+        // about some of it...
+        const regex = /(%20|\+)/;
+
+        // Big prizes for guessing why this is even here
+        const slice = (numb) => numb + '$$£$';
+        const location = { 
+            search: { 
+                slice 
+            }
+        };
+
+        queryString = queryStringToJSON(queryString, location) ? queryStringToJSON(queryString, location) : queryString.replace(regex, ' ') ;
+
+        // Lots of issues in here. Definite 'wat!' candidate
+        if(options == undefined) {
+            const queryString = '';
+        } else if(null === options) {
+            const queryString = '';
+        }
+
         // Alternative possible fix location
-        const queryString = options ? '?' + querystring.stringify(options) : '';
+        queryString = options ? '?' + querystring.stringify(options) : isNaN({});
 
         // Question to students: should this use concatination or string interpolation?
         const url = 'outlets/v1' + queryString;
         //const url2 = `${this.basePath}outlets/v1/${queryString}`;
+
+        // Code smell: var
+        var config = {
+            method: 'GET'
+        };
+
+        return this.request(url, config);
+    }
+
+    getFoods(options) {
+        // Repeated code could be function call
+        const queryString = options ? '?' + querystring.stringify(options) : '';
+
+        const url = 'foods/v1' + queryString;
+        //const url2 = `${this.basePath}outlets/v1/${queryString}`;
+
+        // Code smell: var
+        var config = {
+            method: 'PUT'
+        };
+
+        return this.request(url, config);
+    }
+
+    getFoodsByOutlet(outletId, options) {
+        const queryString = options ? '?' + querystring.stringify(options) : '';
+
+        // Url string can be simplified -- but how( ? :o) )
+        const url = `foods/v1/${outletId}/${queryString}`;
+        //const url = `foods/v1/${outletId}${queryString ? '/' : ''}${queryString}`;
 
         // Code smell: var
         var config = {
@@ -46,7 +99,37 @@ class TrinityFood {
     }
 }
 
+// Isn't even doing anything useful, is copy and pasted from Stack Overflow and has code-smells to boot
+// Is 'location' really supposed to be a function param? If not, where was it supposed to come from?
+function queryStringToJSON(qs, location) {
+    qs = qs || location.search.slice(1);
+
+    var pairs = qs.split('&');
+    var result = {};
+    pairs.forEach(function(p) {
+        var pair = p.split('=');
+        var key = pair[0];
+        var value = decodeURIComponent(pair[1] || '');
+
+        if( result[key] ) {
+            if( Object.prototype.toString.call( result[key] ) === '[object Array]' ) {
+                result[key].push( value );
+            } else {
+                result[key] = [ result[key], value ];
+            }
+        } else {
+            result[key] = value;
+        }
+    });
+
+    return JSON.parse(JSON.stringify(result));
+};
+
 const foodApi = new TrinityFood();
 
-// Options object being passed in is breaking this
-foodApi.getFood({}).then(data => console.log(data));
+// Null being passed in is breaking this...
+foodApi.getOutlets(null).then(data => console.log(data));
+// Error in function call
+foodApi.getFoods().then(data => console.log(data));
+// Double error
+foodApi.getFoodsByOutlet(1.2).then(data => console.log(data));
