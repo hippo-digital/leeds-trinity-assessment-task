@@ -21,7 +21,7 @@ class TrinityFood {
             }
         };
 
-        queryString = queryStringToJSON(queryString, location) ? queryStringToJSON(queryString, location) : queryString.replace(regex, " ") ;
+        queryString = queryStringToJSON(queryString, location) ? queryStringToJSON(queryString, location) : queryString.replace(regex, ' ') ;
 
         // Lots of issues in here. Definite 'wat!' candidate
         if(options == undefined) {
