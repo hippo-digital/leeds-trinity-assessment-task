@@ -7,8 +7,17 @@ class TrinityFood {
     }
 
     getOutlets(options) {
+        let queryString = undefined;
+
+        // Lots of issues in here. Definite 'wat!' candidate
+        if(options == undefined) {
+            const queryString = '';
+        } else if(null === options) {
+            const queryString = '';
+        }
+
         // Alternative possible fix location
-        const queryString = options ? '?' + querystring.stringify(options) : '';
+        queryString = options ? '?' + querystring.stringify(options) : isNaN({});
 
         // Question to students: should this use concatination or string interpolation?
         const url = 'outlets/v1' + queryString;
@@ -31,7 +40,7 @@ class TrinityFood {
 
         // Code smell: var
         var config = {
-            method: 'GET'
+            method: 'PUT'
         };
 
         return this.request(url, config);
@@ -41,7 +50,8 @@ class TrinityFood {
         const queryString = options ? '?' + querystring.stringify(options) : '';
 
         // Url string can be simplified -- but how( ? :o) )
-        const url = `foods/v1/${outletId}${queryString ? '/' : ''}${queryString}`;
+        const url = `foods/v1/${outletId}/${queryString}`;
+        //const url = `foods/v1/${outletId}${queryString ? '/' : ''}${queryString}`;
 
         // Code smell: var
         var config = {
@@ -77,9 +87,9 @@ class TrinityFood {
 
 const foodApi = new TrinityFood();
 
-// Options object being passed in is breaking this
-foodApi.getOutlets({}).then(data => console.log(data));
-// TODO: break here
+// Null being passed in is breaking this...
+foodApi.getOutlets(null).then(data => console.log(data));
+// Error in function call
 foodApi.getFoods().then(data => console.log(data));
-// TODO: break here
-foodApi.getFoodsByOutlet(1).then(data => console.log(data));
+// Double error
+foodApi.getFoodsByOutlet(1.2).then(data => console.log(data));
