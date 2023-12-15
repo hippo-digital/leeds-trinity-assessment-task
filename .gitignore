@@ -35,3 +35,9 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### NPM ###
+/client/node_modules
+
+### MacOS ###
+.DS_Store
