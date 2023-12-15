@@ -87,6 +87,7 @@ class TrinityFood {
     }
 }
 
+// Isn't even doing anything useful, is copy and pasted from Stack Overflow and has code-smells to boot
 function queryStringToJSON(qs) {
     qs = qs || location.search.slice(1);
 
