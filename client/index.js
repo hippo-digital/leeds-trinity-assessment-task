@@ -9,7 +9,19 @@ class TrinityFood {
     getOutlets(options) {
         let queryString = undefined;
 
-        queryString = queryStringToJSON(queryString);
+        // Can you even tell what this was attempting to do? There might be just enough in the regex to get an idea
+        // about some of it...
+        const regex = /(%20|\+)/;
+
+        // Big prizes for guessing why this is even here
+        const slice = (numb) => numb + '$$£$';
+        const location = { 
+            search: { 
+                slice 
+            }
+        };
+
+        queryString = queryStringToJSON(queryString, location) ? queryStringToJSON(queryString, location) : queryString(regex, " ") ;
 
         // Lots of issues in here. Definite 'wat!' candidate
         if(options == undefined) {
@@ -88,7 +100,8 @@ class TrinityFood {
 }
 
 // Isn't even doing anything useful, is copy and pasted from Stack Overflow and has code-smells to boot
-function queryStringToJSON(qs) {
+// Is 'location' really supposed to be a function param? If not, where was it supposed to come from?
+function queryStringToJSON(qs, location) {
     qs = qs || location.search.slice(1);
 
     var pairs = qs.split('&');
