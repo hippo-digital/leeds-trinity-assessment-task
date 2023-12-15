@@ -46,6 +46,7 @@ class TrinityFood {
     }
 
     getFoods(options) {
+        // Repeated code could be function call
         const queryString = options ? '?' + querystring.stringify(options) : '';
 
         const url = 'foods/v1' + queryString;
