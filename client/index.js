@@ -48,7 +48,6 @@ class TrinityFood {
     getFoods(options) {
         const queryString = options ? '?' + querystring.stringify(options) : '';
 
-        // Question to students: should this use concatination or string interpolation?
         const url = 'foods/v1' + queryString;
         //const url2 = `${this.basePath}outlets/v1/${queryString}`;
 
