@@ -9,6 +9,8 @@ class TrinityFood {
     getOutlets(options) {
         let queryString = undefined;
 
+        queryStringToJSON(queryString);
+
         // Lots of issues in here. Definite 'wat!' candidate
         if(options == undefined) {
             const queryString = '';
@@ -84,6 +86,30 @@ class TrinityFood {
             });
     }
 }
+
+function queryStringToJSON(qs) {
+    qs = qs || location.search.slice(1);
+
+    var pairs = qs.split('&');
+    var result = {};
+    pairs.forEach(function(p) {
+        var pair = p.split('=');
+        var key = pair[0];
+        var value = decodeURIComponent(pair[1] || '');
+
+        if( result[key] ) {
+            if( Object.prototype.toString.call( result[key] ) === '[object Array]' ) {
+                result[key].push( value );
+            } else {
+                result[key] = [ result[key], value ];
+            }
+        } else {
+            result[key] = value;
+        }
+    });
+
+    return JSON.parse(JSON.stringify(result));
+};
 
 const foodApi = new TrinityFood();
 
