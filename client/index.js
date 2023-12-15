@@ -6,13 +6,42 @@ class TrinityFood {
       this.basePath = 'http://35.195.182.8:8081/task-api/';
     }
 
-    getFood(options) {
+    getOutlets(options) {
         // Alternative possible fix location
         const queryString = options ? '?' + querystring.stringify(options) : '';
 
         // Question to students: should this use concatination or string interpolation?
         const url = 'outlets/v1' + queryString;
         //const url2 = `${this.basePath}outlets/v1/${queryString}`;
+
+        // Code smell: var
+        var config = {
+            method: 'GET'
+        };
+
+        return this.request(url, config);
+    }
+
+    getFoods(options) {
+        const queryString = options ? '?' + querystring.stringify(options) : '';
+
+        // Question to students: should this use concatination or string interpolation?
+        const url = 'foods/v1' + queryString;
+        //const url2 = `${this.basePath}outlets/v1/${queryString}`;
+
+        // Code smell: var
+        var config = {
+            method: 'GET'
+        };
+
+        return this.request(url, config);
+    }
+
+    getFoodsByOutlet(outletId, options) {
+        const queryString = options ? '?' + querystring.stringify(options) : '';
+
+        // Url string can be simplified -- but how( ? :o) )
+        const url = `foods/v1/${outletId}${queryString ? '/' : ''}${queryString}`;
 
         // Code smell: var
         var config = {
@@ -49,4 +78,8 @@ class TrinityFood {
 const foodApi = new TrinityFood();
 
 // Options object being passed in is breaking this
-foodApi.getFood({}).then(data => console.log(data));
+foodApi.getOutlets({}).then(data => console.log(data));
+// TODO: break here
+foodApi.getFoods().then(data => console.log(data));
+// TODO: break here
+foodApi.getFoodsByOutlet(1).then(data => console.log(data));
