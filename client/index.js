@@ -1,10 +1,9 @@
 const fetch = require('isomorphic-unfetch');
 const querystring = require('querystring');
-const { apiBasePath } = require('./config/api-config');
 
 class TrinityFood {
     constructor() {
-      this.basePath = apiBasePath;
+      this.basePath = 'http://35.195.182.8:8081/task-api/';
     }
 
     getOutlets(options) {
