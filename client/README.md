@@ -5,7 +5,7 @@
 - Clone the repository on your local machine: [like this](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 - Install node LTS from [here](https://nodejs.org)
 - Open the cloned repository in a terminal e.g. `cd leeds-trinity-assessment-task/client`
-- Run `npm i` to install the `node_modules` folder
+- Run `npm i`
 
 ## Bug Fixing
 
