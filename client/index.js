@@ -128,7 +128,7 @@ const foodApi = new TrinityFood();
 
 // Null being passed in is breaking this...
 foodApi.getOutlets(null).then(data => { console.log('Get outlets call completed'); console.log(data); });
-// Error in function call
+// Error in function itself
 foodApi.getFoods().then(data => { console.log('Get foods call completed'); console.log(data); });
 // Double error
 foodApi.getFoodsByOutlet(1.2).then(data => { console.log('Get foods by outlet call completed'); console.log(data); });
