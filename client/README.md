@@ -33,7 +33,7 @@ var config = {
     };
 ```
 
-Then there are a couple more places where the code need changing:
+Then there are a couple more places where the code needs changing:
 
 `foodApi.getFoodsByOutlet(1.2).then(data => console.log(data));`
 
