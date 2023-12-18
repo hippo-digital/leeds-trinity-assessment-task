@@ -72,8 +72,8 @@ This will set the environment variable temporarily, which is all you need right 
 Type `npm run start` into the terminal and, if everything is working, you should receive the following text within the output:
 
 - Get outlets call completed
-- Get foods by outlet call completed
 - Get foods call completed
+- Get foods by outlet call completed
 
 If for any reason it's not possible to get to this stage, or you do not see this in the output, please ask for assistance.
 
