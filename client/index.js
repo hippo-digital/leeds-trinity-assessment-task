@@ -22,6 +22,7 @@ class TrinityFood {
             }
         };
 
+        // This won't actually be applied to any legit call
         queryString = queryStringToJSON(queryString, location) ? queryStringToJSON(queryString, location) : queryString.replace(regex, ' ');
 
         // Lots of issues in here. Definite 'wat!' candidate
