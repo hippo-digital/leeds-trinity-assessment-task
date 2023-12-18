@@ -1,6 +1,6 @@
-const fetch = require('isomorphic-unfetch');
-const querystring = require('querystring');
-const { apiBasePath } = require('./config/api-config');
+import fetch from 'isomorphic-unfetch';
+import querystring from 'querystring';
+import { apiBasePath } from './config/api-config.js';
 
 class TrinityFood {
     constructor() {
@@ -66,11 +66,11 @@ class TrinityFood {
 
         // Url string can be simplified -- but how( ? :o) )
         const url = `foods/v1/${outletId}/${queryString}`;
-        //const url = `foods/v1/${outletId}${queryString ? '/' : ''}${queryString}`;
+        //const url = `foods/v1/${outletId}${queryString ? '/' : '?page=0&size=10'}${queryString}`;
 
         // Code smell: var
         var config = {
-            method: 'GET'
+            method: 'PUT'
         };
 
         return this.request(url, config);
@@ -80,9 +80,7 @@ class TrinityFood {
         const url = this.basePath + endpoint;
     
         // Code smell: let
-        let headers = {
-            'Content-type': 'application/json'
-        };
+        let headers = {};
     
         const config = {
             ...options,
@@ -100,7 +98,7 @@ class TrinityFood {
     }
 }
 
-// Isn't even doing anything useful, is copy and pasted from Stack Overflow and has code-smells to boot
+// Isn't even doing anything useful, is copy and pasted from Stack Overflow and has code-smells to boot.
 // Is 'location' really supposed to be a function param? If not, where was it supposed to come from?
 function queryStringToJSON(qs, location) {
     qs = qs || location.search.slice(1);
@@ -113,7 +111,7 @@ function queryStringToJSON(qs, location) {
         var value = decodeURIComponent(pair[1] || '');
 
         if( result[key] ) {
-            if( Object.prototype.toString.call( result[key] ) === '[object Array]' ) {
+            if( Object.prototype.toString.call( result[key] ) == '[object Array]' ) {
                 result[key].push( value );
             } else {
                 result[key] = [ result[key], value ];
@@ -129,8 +127,8 @@ function queryStringToJSON(qs, location) {
 const foodApi = new TrinityFood();
 
 // Null being passed in is breaking this...
-foodApi.getOutlets(null).then(data => console.log(data));
+foodApi.getOutlets(null).then(data => { console.log('Get outlets call completed'); console.log(data); });
 // Error in function call
-foodApi.getFoods().then(data => console.log(data));
+foodApi.getFoods().then(data => { console.log('Get foods call completed'); console.log(data); });
 // Double error
-foodApi.getFoodsByOutlet(1.2).then(data => console.log(data));
+foodApi.getFoodsByOutlet(1.2).then(data => { console.log('Get foods by outlet call completed'); console.log(data); });
