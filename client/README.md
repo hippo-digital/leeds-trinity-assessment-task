@@ -61,6 +61,8 @@ Now you'll need to set an environment variable to point at the remote API. In a 
 
 Type `export TRINITY_BASE_PATH=http://35.195.182.8:8081/task-api/` into the terminal.
 
+This will set the environment variable temporarily, which is all you need right now. Make sure to do this in the same terminal you run the solution from or it will not work.
+
 ## Running Solution
 
 Type `npm run start` intro the terminal and if everything is working, you should receive the following text within the output:
