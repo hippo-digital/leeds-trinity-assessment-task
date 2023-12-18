@@ -53,7 +53,7 @@ This line should be uncommented to take its place:
 //const url = `foods/v1/${outletId}${queryString ? '/' : ''}${queryString}`;
 ```
 
-Now you'll need to set an environment variable to point at the remote API. In a real environment you might well have to ask around to find out the value for this, although in an ideal world it would be either documented or made available to you as soon as you start on a project. In practice, particularly in consultancy or contracting work, you'll often have to ask multiple people, many of who might be busy, stressed out or force you through a complex process to get this kind of information. Here, we will give you the URL you need.
+Now you'll need to set an environment variable to point at the remote API. In a real environment you might well have to ask around to find out the value for this, although in an ideal world it would be either documented or made available to you as soon as you start on a project. In practice, particularly in consultancy or contracting work, you'll often have to ask multiple people, many of whom might be busy, stressed out or force you through a complex process to get this kind of information. Here, we will give you the URL you need.
 
 ## Setting environment variables
 
