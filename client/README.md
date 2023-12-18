@@ -73,4 +73,6 @@ Type `npm run start` into the terminal and, if everything is working, you should
 
 If for any reason it's not possible to get to this stage, or you do not see this in the output, please ask for assistance.
 
+### Extra credit
 
+Why doesn't the solution work when you run it with `node index.js`? The `package.json` should give you a good idea why. With this in mind, would it be possible to run the solution without setting an environment variable at all? Could you figure out why we might prefer to do it this way?
