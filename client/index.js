@@ -22,7 +22,7 @@ class TrinityFood {
             }
         };
 
-        // This won't actually be applied to any legit call
+        // This won't actually be applied to any legit call, and what it appears to be trying to do is backwards
         queryString = queryStringToJSON(queryString, location) ? queryStringToJSON(queryString, location) : queryString.replace(regex, ' ');
 
         // Lots of issues in here. Definite 'wat!' candidate
