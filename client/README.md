@@ -39,7 +39,7 @@ Then there are a couple more places where the code needs changing:
 
 This code needs changing to read:
 
-`foodApi.getFoodsByOutlet().then(data => console.log(data));`
+`foodApi.getFoodsByOutlet(1).then(data => console.log(data));`
 
 This line should be commented out or removed: 
 
