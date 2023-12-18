@@ -53,7 +53,7 @@ This line should be uncommented to take its place:
 //const url = `foods/v1/${outletId}${queryString ? '/' : ''}${queryString}`;
 ```
 
-Please note that these are not necessarily the best way to fix the problems and in some cases could be papering over other issues.
+Please note that these are not necessarily always the best ways to fix the problems and in some cases could be papering over other issues.
 If you look in the note you'll find some hints about what else might be wrong or better ways to fix things. As such, feel free
 to deviate from the above instructions if you are sure you know a better way.
 
