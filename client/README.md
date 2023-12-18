@@ -37,7 +37,7 @@ Then there are a couple more places where the code need changing:
 
 `foodApi.getFoodsByOutlet(1.2).then(data => console.log(data));`
 
-Needs to change to read:
+This code needs changing to read:
 
 `foodApi.getFoodsByOutlet().then(data => console.log(data));`
 
