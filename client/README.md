@@ -54,7 +54,7 @@ This line should be uncommented to take its place:
 ```
 
 Please note that these are not necessarily always the best ways to fix the problems and in some cases could be papering over other issues.
-If you look in the note you'll find some hints about what else might be wrong or better ways to fix things. As such, feel free
+If you look in the code comments you'll find some hints about what else might be wrong or better ways to fix things. As such, feel free
 to deviate from the above instructions if you are sure you know a better way.
 
 Now you'll need to set an environment variable to point at the remote API. In a real environment you might well have to ask around to find out the value for this, although in an ideal world it would be either documented or made available to you as soon as you start on a project. In practice, particularly in consultancy or contracting work, you'll often have to ask multiple people, many of whom might be busy, stressed out or force you through a complex process to get this kind of information. Here, we will give you the URL you need.
