@@ -75,8 +75,7 @@ This will set the environment variable temporarily, which is all you need right 
 
 For Windows we're going to do things a slightly different way by creating a `.env` file. This allows you to set environment variables in one place and to pass them to the Node program all at once, so you can setup your local working environment with pointers to the things your program will need that are specific to your computer, and may differ from integration and production systems. This method different from the Mac/Linux methodology because we are setting these *only* for Node and not for the OS itself or the terminal.
 
-If you look at the `.gitignore` file in the root directory, you'll notice we have set this file so it's not checked in to source control. This is a good practice as it avoids us accidentally checking
-in what might well be security sensitive information.
+If you look at the `.gitignore` file in the root directory, you'll notice we have set this file so it's not checked in to source control. This is a good practice.
 
 To set your Node environment variable, first create a `.env file`, either in your IDE or by typing `notepad .env` from the command line. Add the following line `BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` then save the file.
 
