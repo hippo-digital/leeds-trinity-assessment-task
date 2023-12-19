@@ -57,7 +57,7 @@ Please note that these are not necessarily always the best ways to fix the probl
 If you look in the code comments you'll find some hints about what else might be wrong or better ways to fix things. As such, feel free
 to deviate from the above instructions if you are sure you know a better way.
 
-## Setting environment variables
+## Setting Environment Variables
 
 You'll need to set an environment variable to point at the remote API. In a real environment you might well have to ask around to find out the value for this, although in an ideal world it would be either documented or made available to you as soon as you start on a project. In practice, particularly in consultancy or contracting work, you'll often have to ask multiple people, many of whom might be busy, stressed out or force you through a complex process to get this kind of information. Here, we will give you the URL you need.
 
@@ -65,7 +65,21 @@ You'll need to set an environment variable to point at the remote API. In a real
 
 Type `export BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` into the terminal.
 
+To check this has worked, type `echo $BASE_TRINITY_PATH`. The output should be 
+
+> http://35.195.182.8:8081/task-api/
+
 This will set the environment variable temporarily, which is all you need right now. Make sure to do this in the same terminal you run the solution from or it will not work.
+
+### Windows
+
+*(Testing in progress -- not guaranteed yet)*
+
+Type `set BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` into the command prompt.
+
+To test that this has worked, type `set` and check that the output includes the above entry.
+
+Make sure to do this in the same command prompt window you run the solution from or it may not work.
 
 ## Running Solution
 
@@ -77,6 +91,6 @@ Type `npm run start` into the terminal and, if everything is working, you should
 
 If for any reason it's not possible to get to this stage, or you do not see this in the output, please ask for assistance.
 
-## Extra credit
+## Extra Credit
 
 Why doesn't the solution work when you run it with `node index.js` from the terminal? The `package.json` should give you a good idea why. With this in mind, would it be possible to run the solution without setting an environment variable at all? Could you figure out why we might prefer to do it this way?
