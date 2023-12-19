@@ -73,17 +73,18 @@ This will set the environment variable temporarily, which is all you need right 
 
 ### Windows
 
-*(Testing in progress -- not guaranteed yet)*
+For Windows we're going to do things a slightly different way by creating a .env file. This allows you to set environment variables in one place and to pass them to the Node program all at once, so you can setup your local working environment with pointers to the things your program will need that are specific to your computer, and may differ from integration and production systems. 
 
-Type `set BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` into the command prompt.
+If you look at the `.gitignore` file in the root directory, you'll notice we have set this file so it's not checked in to source control. This is a good practice as it avoids us accidentally checking
+in what might well be security sensitive information.
 
-To test that this has worked, type `set` and check that the output includes the above entry.
-
-Make sure to do this in the same command prompt window you run the solution from or it may not work.
+To set your Node environment variable, first create a `.env file`, either in your IDE or by typing `notepad .env` from the command line. Add the following line `BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` then save the file.
 
 ## Running Solution
 
-Type `npm run start` into the terminal and, if everything is working, you should receive the following text within the output:
+Type `npm run start` into the terminal for Linux or Mac, or `npm run win-start` for Windows. If everything is working, you should receive the following text within the output:
+
+### Outcome
 
 - Get outlets call completed
 - Get foods call completed
