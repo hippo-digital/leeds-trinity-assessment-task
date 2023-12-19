@@ -67,6 +67,16 @@ Type `export BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` into the term
 
 This will set the environment variable temporarily, which is all you need right now. Make sure to do this in the same terminal you run the solution from or it will not work.
 
+### Windows
+
+*(Testing in progress)*
+
+Type `set BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` into the command prompt.
+
+To test that this has worked, type `set` and check that the output includes the above entry.
+
+Make sure to do this in the same command prompt window you run the solution from or it will not work.
+
 ## Running Solution
 
 Type `npm run start` into the terminal and, if everything is working, you should receive the following text within the output:
