@@ -73,7 +73,7 @@ This will set the environment variable temporarily, which is all you need right 
 
 ### Windows
 
-*(Testing in progress)*
+*(Testing in progress -- not guaranteed yet)*
 
 Type `set BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` into the command prompt.
 
