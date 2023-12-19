@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "BASE_TRINITY_PATH=$BASE_TRINITY_PATH node index.js"
+    "start": "BASE_TRINITY_PATH=$BASE_TRINITY_PATH node index.js",
+    "win-start": "node --env-file=.env index.js"
   },
   "keywords": [],
   "author": "Peter David Carter",
