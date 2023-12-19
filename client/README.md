@@ -94,3 +94,11 @@ If for any reason it's not possible to get to this stage, or you do not see this
 ## Extra Credit
 
 Why doesn't the solution work when you run it with `node index.js` from the terminal? The `package.json` should give you a good idea why. With this in mind, would it be possible to run the solution without setting an environment variable at all? Could you figure out why we might prefer to do it this way?
+
+### Mac/Linux
+
+There is a way to set the environment variable permanently, so it will work from other terminals and after you restart the machine. Can you get this working?
+
+### Windows
+
+We don't actually have to set the `.env` file and can directly manipulate the values in the Windows GUI to pull through with just `node index.js`, skipping the `package.json` script entirely. Going even further, we could create a powershell script to automatically setup the local environment for new developers. Any idea how you could go about doing that? 
