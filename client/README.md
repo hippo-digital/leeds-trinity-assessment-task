@@ -83,8 +83,6 @@ To set your Node environment variable, first create a `.env` file, either in you
 
 Type `npm run start` into the terminal for Linux or Mac, or `npm run win-start` for Windows. If everything is working, you should receive the following text within the output:
 
-### Outcome
-
 - Get outlets call completed
 - Get foods call completed
 - Get foods by outlet call completed
