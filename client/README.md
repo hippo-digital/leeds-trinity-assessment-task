@@ -79,7 +79,7 @@ Type `set BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` into the command
 
 To test that this has worked, type `set` and check that the output includes the above entry.
 
-Make sure to do this in the same command prompt window you run the solution from or it will not work.
+Make sure to do this in the same command prompt window you run the solution from or it may not work.
 
 ## Running Solution
 
