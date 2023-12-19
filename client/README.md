@@ -79,7 +79,7 @@ If you look at the `.gitignore` file in the root directory, you'll notice we hav
 
 To set your Node environment variable, first create a `.env` file, either in your IDE or by typing `notepad .env` from the command line. Add the following line `BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` then save the file.
 
-## Running Solution
+## Running the Solution
 
 Type `npm run start` into the terminal for Linux or Mac, or `npm run win-start` for Windows. If everything is working, you should receive the following text within the output:
 
