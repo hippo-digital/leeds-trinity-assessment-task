@@ -38,6 +38,7 @@ out/
 
 ### NPM ###
 /client/node_modules
+/client/.env
 
 ### MacOS ###
 .DS_Store
