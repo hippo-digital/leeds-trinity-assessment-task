@@ -65,6 +65,8 @@ You'll need to set an environment variable to point at the remote API. In a real
 
 Type `export BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` into the terminal.
 
+To check this has worked, type `echo $BASE_TRINITY_PATH`. The output should be `http://35.195.182.8:8081/task-api/`.
+
 This will set the environment variable temporarily, which is all you need right now. Make sure to do this in the same terminal you run the solution from or it will not work.
 
 ### Windows
