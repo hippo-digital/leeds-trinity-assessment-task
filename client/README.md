@@ -97,6 +97,8 @@ Base: one mark is awarded for each API call that is completed -- demonstrated by
 
 Why doesn't the solution work when you run it with `node index.js` from the terminal? The `package.json` should give you a good idea why. With this in mind, would it be possible to run the solution without setting an environment variable at all? Could you figure out why we might prefer to do it this way?
 
+The repo also includes the server code which can be run locally. Can you take the server code and get it working on your local machine? Can you get the client service successfully running against this local server instance?
+
 ### Mac/Linux
 
 There is a way to set the environment variable permanently, so it will work from other terminals and after you restart the machine. Can you get this working?
