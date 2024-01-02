@@ -89,6 +89,10 @@ Type `npm run start` into the terminal for Linux or Mac, or `npm run win-start` 
 
 If for any reason it's not possible to get to this stage, or you do not see this in the output, please ask for assistance.
 
+## Marks
+
+Base: one mark is awarded for each API call that is completed, with 3/3 scoring 100% for the assessment. For students who finish before the allotted time, extra credit can be earned by addressing the issues noted in the code comments, and those in the 'extra credit' section below.
+
 ## Extra Credit
 
 Why doesn't the solution work when you run it with `node index.js` from the terminal? The `package.json` should give you a good idea why. With this in mind, would it be possible to run the solution without setting an environment variable at all? Could you figure out why we might prefer to do it this way?
