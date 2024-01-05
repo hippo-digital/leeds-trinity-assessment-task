@@ -2,12 +2,19 @@
 
 ## Installation
 
+### IDE
+
+[Visual Studio Code](https://code.visualstudio.com/) is recommended for navigating the repo, though you can use an IDE you are familiar with. 
+
+### Repo
 - Clone the repository on your local machine: [like this](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 - Install node LTS from [here](https://nodejs.org)
 - Open the cloned repository in a terminal e.g. `cd leeds-trinity-assessment-task/client`
 - Run `npm i`
 
 ## Bug Fixing
+
+First try running the code to see the errors that are produced. Once you've done this, look at index.js to make the following changes:
 
 Fix the following code issues to get the repo working:
 
