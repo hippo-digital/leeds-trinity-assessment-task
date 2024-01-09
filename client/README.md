@@ -98,7 +98,7 @@ If for any reason it's not possible to get to this stage, or you do not see this
 
 ## Marks
 
-Base: One mark is awarded for successfully setting Up the environment variables. A further one mark is then awarded for each API call that is completed -- demonstrated by the bulleted text above being successfully output to the console --. 4/4 scores 100% for the assessment. For students who finish before the allotted time, extra credit can be earned by addressing the issues noted in the code comments, and answering the questions in the 'extra credit' section below.
+Base: One mark is awarded for successfully setting Up the environment variables. A further one mark is then awarded for each API call that is completed -- demonstrated by the bulleted text above being successfully output to the console. 4/4 scores 100% for the assessment. For students who finish before the allotted time, extra credit can be earned by addressing the issues noted in the code comments, and answering the questions in the 'extra credit' section below.
 
 ## Extra Credit
 
