@@ -14,7 +14,7 @@
 
 ## Bug Fixing
 
-First try running the code to see the errors that are produced. Once you've done this, look at index.js to make the following changes:
+The index.js file is written to simulate very badly written code you might find in legacy software. First try running the code to see the errors that are produced. Once you've done this, look at index.js to make the following changes:
 
 Fix the following code issues to get the repo working:
 
