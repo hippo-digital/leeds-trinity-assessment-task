@@ -18,11 +18,11 @@ First try running the code to see the errors that are produced. Once you've done
 
 Fix the following code issues to get the repo working:
 
-`foodApi.getOutlets(null).then(data => console.log('Get outlets call completed'));`
+`foodApi.getOutlets().then(data => console.log('Get outlets call completed'));`
 
 Change this to:
 
-`foodApi.getOutlets({}).then(data => console.log('Get outlets call completed'));`
+`foodApi.getOutlets(null).then(data => console.log('Get outlets call completed'));`
 
 Next change:
 
