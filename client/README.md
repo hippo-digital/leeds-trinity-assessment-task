@@ -24,7 +24,7 @@ Change this to:
 
 `foodApi.getOutlets(null).then(data => console.log('Get outlets call completed'));`
 
-Next change:
+Next change one of these:
 
 ```
 var config = {
@@ -39,6 +39,8 @@ var config = {
         method: 'GET'
     };
 ```
+
+You'll need to figure out which one.
 
 Then there are a couple more places where the code needs changing:
 
