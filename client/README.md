@@ -102,6 +102,8 @@ Base: One mark is awarded for successfully setting up the environment variable. 
 
 ## Extra Credit
 
+The output still contains a lot of errors and noise. Can you get rid of all of that, so there's just the `call completed` messages?
+
 Would it be possible to run the solution without setting an environment variable at all, perhaps by doing something in the `package.json`? Could you figure out why we might prefer to do it this way?
 
 The repo also includes the server code which can be run locally. Can you take the server code and get it working on your local machine? Can you get the client service successfully running against this local server instance?
