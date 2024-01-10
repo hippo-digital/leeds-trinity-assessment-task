@@ -40,8 +40,6 @@ var config = {
     };
 ```
 
-You'll need to figure out which one.
-
 Then there are a couple more places where the code needs changing:
 
 `foodApi.getFoodsByOutlet(1.2).then(data => console.log('Get foods by outlet call completed'));`
