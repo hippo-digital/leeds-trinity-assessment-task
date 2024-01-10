@@ -2,6 +2,11 @@
 
 ## Installation
 
+### IDE
+
+[Visual Studio Code](https://code.visualstudio.com/) is recommended for navigating the repo, though you can use any IDE you are familiar with. 
+
+### Repo
 - Clone the repository on your local machine: [like this](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 - Install node LTS from [here](https://nodejs.org)
 - Open the cloned repository in a terminal e.g. `cd leeds-trinity-assessment-task/client`
@@ -9,13 +14,15 @@
 
 ## Bug Fixing
 
+First try running the code to see the errors that are produced. Once you've done this, look at index.js to make the following changes:
+
 Fix the following code issues to get the repo working:
 
-`foodApi.getOutlets(null).then(data => console.log(data));`
+`foodApi.getOutlets(null).then(data => console.log('Get outlets call completed'));`
 
 Change this to:
 
-`foodApi.getOutlets({}).then(data => console.log(data));`
+`foodApi.getOutlets({}).then(data => console.log('Get outlets call completed'));`
 
 Next change:
 
@@ -35,11 +42,11 @@ var config = {
 
 Then there are a couple more places where the code needs changing:
 
-`foodApi.getFoodsByOutlet(1.2).then(data => console.log(data));`
+`foodApi.getFoodsByOutlet(1.2).then(data => console.log('Get foods by outlet call completed'));`
 
 This code needs changing to read:
 
-`foodApi.getFoodsByOutlet(1).then(data => console.log(data));`
+`foodApi.getFoodsByOutlet(1).then(data => console.log('Get foods by outlet call completed'));`
 
 This line should be commented out or removed: 
 
@@ -63,27 +70,25 @@ You'll need to set an environment variable to point at the remote API. In a real
 
 ### MacOS and Ubuntu Linux
 
-Type `export BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` into the terminal.
+Type `export BASE_TRINITY_PATH=https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io` into the terminal.
 
 To check this has worked, type `echo $BASE_TRINITY_PATH`. The output should be 
 
-> http://35.195.182.8:8081/task-api/
+> https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io
 
 This will set the environment variable temporarily, which is all you need right now. Make sure to do this in the same terminal you run the solution from or it will not work.
 
 ### Windows
 
-*(Testing in progress -- not guaranteed yet)*
+For Windows we're going to do things a slightly different way by creating a `.env` file. This method differs from the Mac/Linux methodology because we are setting these *only* for Node and not for the OS itself/the terminal.
 
-Type `set BASE_TRINITY_PATH=http://35.195.182.8:8081/task-api/` into the command prompt.
+If you look at the `.gitignore` file in the root directory, you'll notice we have set this file so it's not checked in to source control. This is a good practice.
 
-To test that this has worked, type `set` and check that the output includes the above entry.
+To set your Node environment variable, first create a `.env` file, either in your IDE or by typing `notepad .env` from the command line. Add the following line `BASE_TRINITY_PATH=https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io` then save the file.
 
-Make sure to do this in the same command prompt window you run the solution from or it may not work.
+## Running the Solution
 
-## Running Solution
-
-Type `npm run start` into the terminal and, if everything is working, you should receive the following text within the output:
+Type `npm run start` into the terminal for Linux or Mac, or `npm run win-start` for Windows. If everything is working, you should receive the following text within the output:
 
 - Get outlets call completed
 - Get foods call completed
@@ -91,6 +96,20 @@ Type `npm run start` into the terminal and, if everything is working, you should
 
 If for any reason it's not possible to get to this stage, or you do not see this in the output, please ask for assistance.
 
+## Marks
+
+Base: One mark is awarded for successfully setting Up the environment variables. A further one mark is then awarded for each API call that is completed -- demonstrated by the bulleted text above being successfully output to the console. 4/4 scores 100% for the assessment. For students who finish before the allotted time, extra credit can be earned by addressing the issues noted in the code comments, and answering the questions in the 'extra credit' section below.
+
 ## Extra Credit
 
-Why doesn't the solution work when you run it with `node index.js` from the terminal? The `package.json` should give you a good idea why. With this in mind, would it be possible to run the solution without setting an environment variable at all? Could you figure out why we might prefer to do it this way?
+Would it be possible to run the solution without setting an environment variable at all, perhaps by doing something in the `package.json`? Could you figure out why we might prefer to do it this way?
+
+The repo also includes the server code which can be run locally. Can you take the server code and get it working on your local machine? Can you get the client service successfully running against this local server instance?
+
+### Mac/Linux
+
+There is a way to set the environment variable permanently, so it will work from other terminals and after you restart the machine. Can you get this working?
+
+### Windows
+
+We don't actually have to set the `.env` file and can directly manipulate the values in the Windows GUI to pull through with just `node index.js`, skipping the `package.json` script entirely. Going even further, we could create a powershell script to automatically setup the local environment for new developers. Any idea how you could go about doing that? 
