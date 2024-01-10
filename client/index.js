@@ -10,11 +10,11 @@ class TrinityFood {
     getOutlets(options) {
         let queryString = undefined;
 
-        // Can you even tell what this was attempting to do? There might be just enough in the regex to get an idea
+        // Can you tell what this was attempting to do? There might be just enough in the regex to get an idea
         // about some of it...
         const regex = /(%20|\+)/;
 
-        // Big prizes for guessing why this is even here
+        // Big prizes for guessing why this is here...
         const slice = (numb) => numb + '$$£$';
         const location = { 
             search: { 
@@ -25,7 +25,7 @@ class TrinityFood {
         // This won't actually be applied to any legit call, and what it appears to be trying to do is backwards
         queryString = queryStringToJSON(queryString, location) ? queryStringToJSON(queryString, location) : queryString.replace(regex, ' ');
 
-        // Lots of issues in here. Definite 'wat!' candidate
+        // Lots of issues here.
         if(options == undefined) {
             const queryString = '';
         } else if(null === options) {
@@ -35,7 +35,7 @@ class TrinityFood {
         // Alternative possible fix location
         queryString = options ? '?' + querystring.stringify(options) : isNaN({});
 
-        // Question to students: should this use concatination or string interpolation?
+        // Should this use concatenation or string interpolation?
         const url = 'outlets/v1' + queryString;
         //const url2 = `${this.basePath}outlets/v1/${queryString}`;
 
@@ -48,7 +48,7 @@ class TrinityFood {
     }
 
     getFoods(options) {
-        // Repeated code could be function call
+        // Minor: Repeated code could be function call
         const queryString = options ? '?' + querystring.stringify(options) : '';
 
         const url = 'foods/v1' + queryString;
@@ -99,7 +99,7 @@ class TrinityFood {
     }
 }
 
-// Isn't even doing anything useful, is copy and pasted from Stack Overflow and has code-smells to boot.
+// Isn't doing anything useful, is copy and pasted from Stack Overflow and has code-smells to boot.
 // Is 'location' really supposed to be a function param? If not, where was it supposed to come from?
 function queryStringToJSON(qs, location) {
     qs = qs || location.search.slice(1);
