@@ -33,7 +33,7 @@ class TrinityFood {
         }
 
         // Alternative possible fix location
-        queryString = options ? '?' + querystring.stringify(options) : isNaN({});
+        queryString = options ? '?' + querystring.stringify(options) : "";
 
         // Should this use concatenation or string interpolation?
         const url = 'outlets/v1' + queryString;
@@ -62,16 +62,17 @@ class TrinityFood {
         return this.request(url, config);
     }
 
-    getFoodsByOutlet(outletId, options) {
-        const queryString = options ? '?' + querystring.stringify(options) : '';
+    getFoodsByOutlet(outletId, options = null) {
+        const queryString = options ? '?' + '/' + querystring.stringify(options) : '';
 
         // Url string can be simplified -- but how( ? :o) )
-        const url = `foods/v1/${outletId}/${queryString}`;
+        const url = `foods/v1/${outletId}${queryString}`;
+
         //const url = `foods/v1/${outletId}${queryString ? '/' : '?page=0&size=10'}${queryString}`;
 
         // Code smell: var
         var config = {
-            method: 'PUT'
+            method: 'GET'
         };
 
         return this.request(url, config);
@@ -87,7 +88,8 @@ class TrinityFood {
             ...options,
             ...headers
         };
-    
+
+        console.log(url);
         return fetch(url, config).then(r => {
             // Console log left in
             console.log(r);
@@ -127,8 +129,8 @@ function queryStringToJSON(qs, location) {
 
 const foodApi = new TrinityFood();
 
-// Null being passed in is breaking this...
-foodApi.getOutlets(null).then(data => { console.log('Get outlets call completed'); console.log(data); });
+// Empty call is breaking this...
+foodApi.getOutlets().then(data => { console.log('Get outlets call completed'); console.log(data); });
 // Error in function itself
 foodApi.getFoods().then(data => { console.log('Get foods call completed'); console.log(data); });
 // Double error
