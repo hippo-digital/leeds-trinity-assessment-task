@@ -70,11 +70,11 @@ You'll need to set an environment variable to point at the remote API. In a real
 
 ### MacOS and Ubuntu Linux
 
-Type `export BASE_TRINITY_PATH=https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io` into the terminal.
+Type `export BASE_TRINITY_PATH=https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io/task-api` into the terminal.
 
 To check this has worked, type `echo $BASE_TRINITY_PATH`. The output should be 
 
-> https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io
+> https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io/task-api
 
 This will set the environment variable temporarily, which is all you need right now. Make sure to do this in the same terminal you run the solution from or it will not work.
 
