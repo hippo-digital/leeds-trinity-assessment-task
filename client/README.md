@@ -70,7 +70,7 @@ You'll need to set an environment variable to point at the remote API. In a real
 
 ### MacOS and Ubuntu Linux
 
-Type `export BASE_TRINITY_PATH=https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io/task-api` into the terminal.
+Type `export BASE_TRINITY_PATH=https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io/task-api/` into the terminal.
 
 To check this has worked, type `echo $BASE_TRINITY_PATH`. The output should be 
 
@@ -84,7 +84,7 @@ For Windows we're going to do things a slightly different way by creating a `.en
 
 If you look at the `.gitignore` file in the root directory, you'll notice we have set this file so it's not checked in to source control. This is a good practice.
 
-To set your Node environment variable, first create a `.env` file, either in your IDE or by typing `notepad .env` from the command line. Add the following line `BASE_TRINITY_PATH=https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io` then save the file.
+To set your Node environment variable, first create a `.env` file, either in your IDE or by typing `notepad .env` from the command line. Add the following line `BASE_TRINITY_PATH=https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io/task-api/` then save the file.
 
 ## Running the Solution
 
