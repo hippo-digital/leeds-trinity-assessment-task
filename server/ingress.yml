@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: task-api-ingress
+  namespace: hippodigital-dev-taskapi-1
+spec:
+  rules:
+    - host: a35fcd54d118f47b8a72aa4325b8a675-697660010.eu-west-2.elb.amazonaws.com  # Replace with your desired domain
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: task-api-service
+                port:
+                  number: 8080
