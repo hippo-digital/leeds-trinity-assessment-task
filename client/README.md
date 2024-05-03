@@ -84,7 +84,7 @@ For Windows we're going to do things a slightly different way by creating a `.en
 
 If you look at the `.gitignore` file in the root directory, you'll notice we have set this file so it's not checked in to source control. This is a good practice.
 
-To set your Node environment variable, first create a `.env` file, either in your IDE or by typing `notepad .env` from the command line. Add the following line `BASE_TRINITY_PATH=https://leeds-trinity-api--vs3x78e.livelyplant-f1fa8836.ukwest.azurecontainerapps.io/task-api` then save the file.
+To set your Node environment variable, first create a `.env` file, either in your IDE or by typing `notepad .env` from the command line. Add the following line `BASE_TRINITY_PATH=http://a35fcd54d118f47b8a72aa4325b8a675-697660010.eu-west-2.elb.amazonaws.com:8080/task-api` then save the file.
 
 ## Running the Solution
 

@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: task-api-container
-          image: docker.io/araabdulkalam/task-api:1.10
+          image: docker.io/araabdulkalam/task-api:0.1
           ports:
             - containerPort: 8081

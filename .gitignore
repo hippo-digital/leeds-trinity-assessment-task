@@ -42,3 +42,4 @@ out/
 
 ### MacOS ###
 .DS_Store
+server/AWSCLIV2.pkg
