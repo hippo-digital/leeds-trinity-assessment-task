@@ -1,4 +1,17 @@
-# leeds-trinity-assessment-task
-We want to provide the students with an independent task that can be done in around 45 minutes and will be able to be easily marked afterwards.
+# Welcome
 
-Please see the client directory README.md for student-facing instructions.
+This is a repo for an API that has been built with some deliberate issues and errors.
+
+This is part of a challenge set by Hippo to assess your ability and knowledge of coding and software engineering.
+
+If you are here to take part in the challenge, you are in the right place. Please head to the [client directory README.md](client/README.md) for further instruction and to get started.
+
+Good Luck!
+
+
+
+
+
+
+
+Please see the  for instructions.
