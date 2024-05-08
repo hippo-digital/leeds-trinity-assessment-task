@@ -59,3 +59,22 @@ The API is intended to be run in a Docker container running in EKS (Elastic Kube
     Events:                   <none>
     ```
     LoadBalancer Ingress gives the external IP address of the service, so if you have re-deployed the service, this will be different and will need to be updated in the student instructions (with the addition of the 8080 port number).
+
+## NOTE
+In order to reduce costs, ensure the T3 instance is not running whne it is not needed.
+
+### To start the instance
+1. Log on to the AWS training acount using administrator access
+2. Navigate to EC2
+3. Select Auto Scaling Groups from the left menu
+4. Select the '''eksctl-assessment-api-nodegroup-assessment-api-ng-1-NodeGroup-HzMlFyb3xUfn''' group
+5. Edit the group details, and increase the Desired capacity and Minimum capacity to 1
+6. Save
+
+### To stop the instance
+1. Log on to the AWS training acount using administrator access
+2. Navigate to EC2
+3. Select Auto Scaling Groups from the left menu
+4. Select the '''eksctl-assessment-api-nodegroup-assessment-api-ng-1-NodeGroup-HzMlFyb3xUfn''' group
+5. Edit the group details, and increase the Desired capacity and Minimum capacity to 0
+6. Save
